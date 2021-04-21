@@ -81,7 +81,6 @@ public class SampleController {
 		return "/sample/ex04";
 	}
 
-	
 	@GetMapping("/ex05")
 	public void ex05() {  // 경로 그대로 jsp 파일이 설정
 		log.info("/ex05............");

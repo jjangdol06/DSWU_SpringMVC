@@ -1,6 +1,7 @@
 package kjy.library.controller;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -23,11 +24,6 @@ import lombok.extern.log4j.Log4j;
 @RequestMapping("/books/*")
 @Log4j
 public class BookController {
-	
-	@RequestMapping("/test")
-	public void test() { 
-		log.info("test : ");
-	}
 
 	@RequestMapping("/registerBook")
 	public String registerBook(BookDTO bookDTO) { 
@@ -40,17 +36,20 @@ public class BookController {
 		return "registerBook";
 	}
 	
-	@RequestMapping("/getBook")
-	public @ResponseBody BookDTO getBook() {
-		log.info("getBook............");
-		BookDTO dto = new BookDTO();
+	@GetMapping("/getBook")
+	public @ResponseBody BookDTO getBook() throws ParseException {
+		log.info("/getBook............");
 		
+        Date pubdate=new SimpleDateFormat("yyyy/MM/dd").parse("2020/02/02");  
+		
+		BookDTO dto = new BookDTO();
 		dto.setTitle("title01");
 		dto.setAuthor("kjy01");
 		dto.setGenre("fiction");
 		dto.setPrice(1000);
-		dto.setPubdate(new Date("2020-02-02"));
+		dto.setPubdate(pubdate);
 		
+		log.info(dto);
 		return dto;
 	}
 	
