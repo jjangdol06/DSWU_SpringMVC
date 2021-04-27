@@ -40,7 +40,7 @@ public class BookController {
 	public @ResponseBody BookDTO getBook() throws ParseException {
 		log.info("/getBook............");
 		
-        Date pubdate=new SimpleDateFormat("yyyy/MM/dd").parse("2020/02/02");  
+        Date pubdate=new Date("2020/02/02");
 		
 		BookDTO dto = new BookDTO();
 		dto.setTitle("title01");
