@@ -32,7 +32,7 @@ public class BookMapperTests {
 		book.setAuthor("새로운 저자1");
 		book.setGenre("새로운 장르1");
 		book.setPrice(7777);
-		book.setPubdate(new Date("2021-7-7"));
+		book.setPubdate(new Date("2021/7/7"));
 		
 		mapper.insert(book);
 		
@@ -46,7 +46,7 @@ public class BookMapperTests {
 		book.setAuthor("새로운 저자2");
 		book.setGenre("새로운 장르2");
 		book.setPrice(8888);
-		book.setPubdate(new Date("2021-8-8"));
+		book.setPubdate(new Date("2021/8/8"));
 		
 		mapper.insertSelectKey(book);
 		
@@ -73,6 +73,7 @@ public class BookMapperTests {
 		book.setAuthor("변경된 저자");
 		book.setGenre("변경된 장르");
 		book.setPrice(7777);
+		book.setPubdate(new Date());
 		
 		int count = mapper.update(book);
 		

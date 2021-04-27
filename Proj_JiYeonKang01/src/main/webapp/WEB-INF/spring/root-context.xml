@@ -26,8 +26,8 @@
 	<constructor-arg ref="hikariConfig" />
 	</bean>
 	
-	<context:component-scan base-package="kjy.library.sample">
-	</context:component-scan>
+<!-- 	<context:component-scan base-package="kjy.library.sample">
+	</context:component-scan> -->
 	
 	<mybatis-spring:scan base-package="kjy.library.mapper"/>
 	<bean id="sqlSessionFactory"

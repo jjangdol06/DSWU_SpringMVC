@@ -6,7 +6,7 @@ import kjy.library.domain.BookVO;
 
 public interface BookMapper {
 
-	public List<BookVO> getList();  // 과제에 void
+	public List<BookVO> getList();  
 	
 	public void insert(BookVO book);
 	

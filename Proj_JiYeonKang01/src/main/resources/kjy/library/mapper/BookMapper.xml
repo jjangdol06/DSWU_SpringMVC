@@ -15,9 +15,10 @@
 <insert id="insert">
 <![CDATA[
 		insert into tbl_bookList(bno, title, author, genre, price, pubdate) 
-		values (seq_board.nextval, #{title}, #{author}, #{genre}, #{price}, #{pubdate})
+		values (seq_bookList.nextval, #{title}, #{author}, #{genre}, #{price}, #{pubdate})
 		]]>
 </insert>
+
 
 <insert id="insertSelectKey">
 <selectKey keyProperty="bno" order="BEFORE" resultType="long">
@@ -41,7 +42,7 @@ values (#{bno}, #{title}, #{author}, #{genre}, #{price}, #{pubdate})
 	update tbl_bookList
 	set title=#{title},
 	author=#{author},
-	genres=#{genre},
+	genre=#{genre},
 	price=#{price},
 	pubdate=#{pubdate}
 	where bno=#{bno}
