@@ -69,11 +69,10 @@ public class BookMapperTests {
 	public void testUpdate() {
 		BookVO book = new BookVO();
 		book.setBno(1L);
-		book.setTitle("변경된 제목");
+		book.setTitle("변경된 제목"); 
 		book.setAuthor("변경된 저자");
 		book.setGenre("변경된 장르");
 		book.setPrice(7777);
-		book.setPubdate(new Date());
 		
 		int count = mapper.update(book);
 		
