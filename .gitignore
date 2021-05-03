@@ -152,3 +152,4 @@ buildNumber.properties
 .flattened-pom.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java,maven,git,macos
+ex02/src/main/webapp/resources
