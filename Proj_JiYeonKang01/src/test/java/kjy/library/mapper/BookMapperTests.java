@@ -78,4 +78,5 @@ public class BookMapperTests {
 		
 		log.info("UPDATE COUNT : " + count);
 	}
+	
 }
